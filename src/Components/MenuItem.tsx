@@ -13,9 +13,9 @@ function MenuItem({ recipeName, image, calories }: Recipe) {
         <div>
             <Card id="card" key={recipeName}>
                 <Card.Img variant="top" src={image} alt={recipeName} />
-                <Card.Body>
+                <Card.Body style={{textAlign: 'center'}}>
                     <Card.Title>{recipeName}</Card.Title>
-                    <Card.Text>Calories: {calories}</Card.Text>
+                    <Card.Text>Calories: {calories.toString()}</Card.Text>
                     <Link to={`/recipes/${recipeName}`} className="btn btn-primary">View Recipe</Link>
                 </Card.Body>
             </Card>

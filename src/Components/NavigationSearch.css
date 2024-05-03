@@ -5,17 +5,18 @@
     width: 100%;
     font-size: 18px;
     z-index: 1;
+    background-color: #5A5A5A !important;
 }
 
 .navbar-brand {
     padding-left: 20px !important;
     font-size: 24px;
     font-weight: 900;
-    color: #61c56e !important;
+    color: #52CC62 !important;
 }
 
 .search-button {
-    background-color: #61c56e;
+    background-color: #52CC62 !important;
     border: None;
     width: 2.5rem;
     border-radius: 10px;
@@ -26,6 +27,10 @@
 }
 
 input.custom-search {
-    border-radius: 10px;
+    border-radius: 50px;
     border: None;
+}
+
+::placeholder {
+    padding-left: 12px;
 }
