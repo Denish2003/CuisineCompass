@@ -14,9 +14,6 @@ interface Recipe {
 function RecipeDetail() {
     const { recipeName } = useParams<{ recipeName: string }>();
     const recipe = testData.find((item: Recipe) => item.recipeName === recipeName);
-
-    console.log("Recipe:", recipe);
-    console.log("Image Path:", recipe?.image);
     
     if (!recipe) {
         return <h1>Recipe not found</h1>;
@@ -26,7 +23,7 @@ function RecipeDetail() {
         <>
             <div className="page">
                 <h1>{recipe.recipeName}</h1>
-                <CardImg src={recipe.image} alt={recipe.recipeName} />
+                <img className="food-image" src={`/${recipe.image}`} alt={recipe.recipeName} />
                 <h4>Calories: {recipe.calories}</h4>
 
                 <h3>Ingredients: </h3>
