@@ -1,0 +1,31 @@
+.navbar-expand-lg.bg-body-tertiary {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.navbar-brand {
+    padding-left: 20px !important;
+    font-size: 24px;
+    font-weight: 900;
+    color: #61c56e !important;
+}
+
+.search-button {
+    background-color: #61c56e;
+    border: None;
+    width: 2.5rem;
+    border-radius: 10px;
+}
+
+.search-icon {
+    color: white;
+}
+
+input.custom-search {
+    border-radius: 10px;
+    border: None;
+}

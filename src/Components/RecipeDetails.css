@@ -1,0 +1,8 @@
+.page {
+    padding: 20px; /* Add padding to the RecipeDetail */
+    top: 60px; /* Position the sidebar 60px from the top of the viewport */
+    bottom: 0px; /* Extend to the bottom of the viewport */
+    overflow-y: auto; /* Allow sidebar to scroll vertically */
+    margin-left: 25%; /* Position the sidebar 25% from the left of the viewport */
+    margin-top: 5%;
+}  

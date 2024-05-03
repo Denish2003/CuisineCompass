@@ -1,0 +1,20 @@
+.card {
+    margin-top: 4%;
+    width: 100%; /* Full width */
+    border-radius: 10px 10px 0 0; /* Apply border radius to the top only */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure all cards have equal height */
+}
+
+.card img {
+    flex-grow: 1; /* Allow the image to grow to fill the available space */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    height: 250px; /* Set the height of the image */
+}
+
+.card-body {
+    align-items: center;
+}
+
