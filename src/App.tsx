@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavigationSearch from "./Components/NavigationSearch";
 import SideNav from "./Components/SideNav";
 import MainContent from "./Components/MainContent";
-import RecipeDetails from "./Components/RecipeDetails"; 
+import RecipeDetails from "./Components/RecipeDetails";
 
 function App() {
   return (
