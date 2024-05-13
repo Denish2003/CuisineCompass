@@ -1,15 +1,6 @@
 
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -23,23 +14,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-  </a>
-
-  <h3 align="center">Cuisine Compass</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
+  <h1 align="center">Cuisine Compass</h3>
 </div>
 
 
@@ -63,57 +38,43 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+"Cuisine Compass" is a culinary project designed to cater to food enthusiasts' diverse tastes and dietary preferences. The platform offers a vast collection of recipes spanning various cuisines from around the world. What sets Cuisine Compass apart is its user-friendly interface, which allows users to navigate through the extensive recipe database effortlessly.
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+One of the key features of Cuisine Compass is its robust filtering system. Users can refine their recipe search based on cuisine type, occasion, dietary restrictions, and more. Whether someone is searching for a vegetarian dish, a gluten-free option, or a specific cuisine like Italian or Thai, Cuisine Compass makes it easy to find suitable recipes tailored to their needs.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Moreover, Cuisine Compass offers a sophisticated search functionality, enabling users to quickly locate recipes by entering specific keywords or ingredients. This feature is particularly handy for users with particular dietary requirements or those seeking inspiration based on available ingredients.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Overall, Cuisine Compass aims to streamline the culinary exploration process by providing a comprehensive platform where users can discover, filter, and explore a wide array of recipes tailored to their tastes and dietary preferences. Whether someone is a seasoned chef or a novice cook, Cuisine Compass serves as a valuable resource for culinary inspiration and exploration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![TypeScript][TypeScript.tsx]][TypeScript-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This project is built using React, React-Bootstrap, and TypeScript, providing a robust and modern development environment for building web applications. Follow these steps to set up your development environment and start working on the project:
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Before you begin, ensure you have the following installed on your system:
+
+- Node.js and npm (Node Package Manager): You can download and install them from [here](https://nodejs.org/).
 
 ### Installation
 
@@ -121,19 +82,22 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/your_username_/CuisineCompass.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
-3. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+
+### Running the Application
+Once you have installed the dependencies, you can run the application locally by following these steps:
+
+1. Start the development server:
+   ```sh
+   npm run dev
    ```
-
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- USAGE EXAMPLES -->
@@ -144,17 +108,15 @@ Use this space to show useful examples of how a project can be used. Additional 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Top Navigation Bar
+- [X] Side Navigation Bar / Filter System
+- [x] Recipe Page for each recipe
+- [ ] Search
+- [ ] Switch from test dataset to actual API
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,12 +124,11 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Xyz Xyz - email@example.com
+Denish Patel - dp9798@princeton.edu
 
 Project Link: [https://github.com/Denish2003/CuisineCompass/](https://github.com/Denish2003/CuisineCompass/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ACKNOWLEDGMENTS -->
@@ -181,7 +142,6 @@ Use this space to list resources you find helpful and would like to give credit 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-url]: https://linkedin.com/in/othneildrew
@@ -189,3 +149,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [React-url]: https://reactjs.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
+[TypeScript.tsx]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
