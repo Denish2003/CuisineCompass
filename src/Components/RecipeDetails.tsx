@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import testData from './TestDataset.json';
 import './RecipeDetails.css';
-import { CardImg } from 'react-bootstrap';
 
 interface Recipe {
     recipeName: string;

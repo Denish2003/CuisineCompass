@@ -9,9 +9,14 @@ function NavigationSearch() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <form className="d-flex w-50" role="search">
-                        <input className="form-control me-2 custom-search" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="search-button" type="submit"><span className="bi bi-search search-icon"></span></button>
-                    </form>
+                    <input 
+                        className="form-control me-2 custom-search" 
+                        type="search" 
+                        placeholder="Search" 
+                        aria-label="Search" 
+                    />
+                    <button className="search-button" type="submit"><span className="bi bi-search search-icon"></span></button>
+                </form>
             </div>
         </nav>
     );

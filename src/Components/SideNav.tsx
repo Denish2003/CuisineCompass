@@ -1,60 +1,23 @@
 import ListGroup from "./ListGroup";
 import "./SideNav.css";
 
-function SideNav() {
-    let cuisines = [
-      "Italian",
-      "Mexican",
-      "Chinese",
-      "Korean",
-      "Japanese",
-      "Mediterranean",
-      "Indian",
-      "American",
-      "French",
-      "Thai",
-      "Greek",
-      "Middle Eastern",
-    ];
-    let mealTypes = [
-      "Breakfast", 
-      "Brunch", 
-      "Lunch", 
-      "Dinner", 
-      "Snack", 
-      "Desserts"
-    ];
-    let dietaryPreferences = [
-      "Vegetarian",
-      "Vegan",
-      "Gluten Free",
-      "Dairy Free",
-      "Keto",
-      "Paleo",
-      "Low Carb",
-      "Low Fat",
-      "Low Sodium",
-      "Low Sugar",
-      "High Protein",
-      "High Fiber",
-    ];
-    let occasions = [
-      "Party/Festive",
-      "Quick & Easy",
-      "Comfort Food",
-      "Budget Friendly",
-      "Date Night",
-    ];
+interface Category {
+  heading: string;
+  items: string[];
+}
 
-    return (
-        <div className="sidenav">
-            <ListGroup items={cuisines} heading={"Cuisine"} />
-            <ListGroup items={mealTypes} heading={"Meal Types"} />
-            <ListGroup items={dietaryPreferences} heading={"Dietary Preferences"} />
-            <ListGroup items={occasions} heading={"Occasions"} />
-        </div>
-    );
+interface SideNavProps {
+  data: Category[];
+}
+
+function SideNav({ data }: SideNavProps) {
+  return (
+    <div className="sidenav">
+      {data.map((category, index) => (
+        <ListGroup key={index} items={category.items} heading={category.heading} />
+      ))}
+    </div>
+  );
 }
 
 export default SideNav;
-
