@@ -103,7 +103,7 @@ Once you have installed the dependencies, you can run the application locally by
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/Demo1.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
