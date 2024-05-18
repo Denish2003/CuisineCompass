@@ -1,6 +1,19 @@
+import { useState, useEffect } from 'react';
 import './NavigationSearch.css';
+import { useSearch } from './SearchContext';
 
 function NavigationSearch() {
+    const { setSearchTerm } = useSearch();
+    const [search, setSearch] = useState<string>('');
+
+    useEffect(() => {
+        setSearchTerm(search);
+    }, [search, setSearchTerm]);
+
+    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearch(e.target.value);
+    };
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -13,7 +26,9 @@ function NavigationSearch() {
                         className="form-control me-2 custom-search" 
                         type="search" 
                         placeholder="Search" 
-                        aria-label="Search" 
+                        aria-label="Search"
+                        value={search}
+                        onChange={handleSearchChange} 
                     />
                     <button className="search-button" type="submit"><span className="bi bi-search search-icon"></span></button>
                 </form>

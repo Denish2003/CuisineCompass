@@ -4,6 +4,7 @@ import SideNav from "./Components/SideNav";
 import MainContent from "./Components/MainContent";
 import RecipeDetails from "./Components/RecipeDetails";
 import { useState, useEffect } from 'react';
+import { SearchProvider } from './Components/SearchContext';
 
 const landingPage = [
   { heading: "Cuisines", items: ["Italian", "Mexican", "Chinese", "Korean", "Japanese", "Mediterranean", "Indian", "American", "French", "Thai", "Greek", "Middle Eastern"] },
@@ -30,12 +31,14 @@ function App() {
 
   return (
       <>
-        <NavigationSearch />
+        <SearchProvider>
+          <NavigationSearch />
         <SideNav data={sideNavData} />
           <Routes>
             <Route path="/" element={<MainContent />} />
             <Route path="/recipes/:recipeName" element={<RecipeDetails />} />
           </Routes>
+        </SearchProvider>
       </>
   );
 }
