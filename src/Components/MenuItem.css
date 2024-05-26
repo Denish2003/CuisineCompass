@@ -19,11 +19,12 @@
 }
 
 .btn-primary {
-    background-color: #52CC62 !important;
+    background-color: #26a838 !important;
     border: None !important;
     width: 100%;
     border-radius: 10px;
     color: white;
     margin-top: 10px;
+    font-weight: 500 !important;
 }
 

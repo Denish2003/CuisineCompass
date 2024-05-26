@@ -21,8 +21,8 @@ function RecipeDetail() {
     return (
         <>
             <div className="page">
-                <h1>{recipe.recipeName}</h1>
                 <img className="food-image" src={`/${recipe.image}`} alt={recipe.recipeName} />
+                <h1>{recipe.recipeName}</h1>
                 <h4>Calories: {recipe.calories}</h4>
 
                 <h3>Ingredients: </h3>

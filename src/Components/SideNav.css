@@ -1,18 +1,33 @@
 .sidenav {
     height: 100%;
-    width: 25%;
+    width: 20%;
     position: fixed;
     top: 0;
     left: 0;
     bottom:0;
-    background-color: #ffffff;
-    padding-top: 10px;
+    background-color: #222222;
     padding-bottom: 60px;
     padding-left: 10px;
     padding-right: 10px;
-    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4%;
+    color: white;
+}
+
+.brand {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center !important;
+    font-size: 40px;
+    font-weight: 700;
+    color: #26a838;
+    text-decoration: None;
+}
+
+.side-menu {
+    color: white;
+    font-weight: 500;
+    padding-bottom: 10px;
+    text-decoration: None;
 }

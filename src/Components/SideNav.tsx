@@ -1,4 +1,3 @@
-import ListGroup from "./ListGroup";
 import "./SideNav.css";
 
 interface Category {
@@ -11,6 +10,7 @@ interface SideNavProps {
 }
 
 function SideNav({ data }: SideNavProps) {
+  /*
   return (
     <div className="sidenav">
       {data.map((category, index) => (
@@ -18,6 +18,17 @@ function SideNav({ data }: SideNavProps) {
       ))}
     </div>
   );
+  */
+
+  return (
+    <div className="sidenav">
+      <a className="brand" href="\">Cuisine Compass</a>
+      <a className="side-menu" href="\">Home</a>
+      <a className="side-menu" href="#heading">Recipes</a>
+      <a className="side-menu">Filter</a>
+      <a className="side-menu">Recipe Submission</a>
+    </div>
+  )
 }
 
 export default SideNav;

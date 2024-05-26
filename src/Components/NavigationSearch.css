@@ -27,10 +27,7 @@
 }
 
 input.custom-search {
+    padding-left: 20px !important;
     border-radius: 50px;
     border: None;
-}
-
-::placeholder {
-    padding-left: 12px;
 }

@@ -1,5 +1,4 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-import NavigationSearch from "./Components/NavigationSearch";
 import SideNav from "./Components/SideNav";
 import MainContent from "./Components/MainContent";
 import RecipeDetails from "./Components/RecipeDetails";
@@ -32,12 +31,11 @@ function App() {
   return (
       <>
         <SearchProvider>
-          <NavigationSearch />
-        <SideNav data={sideNavData} />
-          <Routes>
-            <Route path="/" element={<MainContent />} />
-            <Route path="/recipes/:recipeName" element={<RecipeDetails />} />
-          </Routes>
+          <SideNav data={sideNavData} />
+            <Routes>
+              <Route path="/" element={<MainContent />} />
+              <Route path="/recipes/:recipeName" element={<RecipeDetails />} />
+            </Routes>
         </SearchProvider>
       </>
   );
