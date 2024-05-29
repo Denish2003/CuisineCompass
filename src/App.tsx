@@ -4,6 +4,7 @@ import MainContent from "./Components/MainContent";
 import RecipeDetails from "./Components/RecipeDetails";
 import { useState, useEffect } from 'react';
 import { SearchProvider } from './Components/SearchContext';
+import Submission from './Components/Submission';
 
 const landingPage = [
   { heading: "Cuisines", items: ["Italian", "Mexican", "Chinese", "Korean", "Japanese", "Mediterranean", "Indian", "American", "French", "Thai", "Greek", "Middle Eastern"] },
@@ -35,6 +36,7 @@ function App() {
             <Routes>
               <Route path="/" element={<MainContent />} />
               <Route path="/recipes/:recipeName" element={<RecipeDetails />} />
+              <Route path="/submission" element={<Submission />} />
             </Routes>
         </SearchProvider>
       </>

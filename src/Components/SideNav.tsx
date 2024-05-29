@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SideNav.css";
 
 interface Category {
@@ -26,7 +27,7 @@ function SideNav({ data }: SideNavProps) {
       <a className="side-menu" href="\">Home</a>
       <a className="side-menu" href="#heading">Recipes</a>
       <a className="side-menu">Filter</a>
-      <a className="side-menu">Recipe Submission</a>
+      <Link to={`/submission`} className="side-menu">Recipe Submission</Link>
     </div>
   )
 }
