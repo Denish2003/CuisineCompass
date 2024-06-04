@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import testData from './TestDataset.json';
 import './RecipeDetails.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 interface Recipe {
     recipeName: string;
@@ -21,23 +22,32 @@ function RecipeDetail() {
     return (
         <>
             <div className="page">
-                <img className="food-image" src={`/${recipe.image}`} alt={recipe.recipeName} />
-                <h1>{recipe.recipeName}</h1>
-                <h4>Calories: {recipe.calories}</h4>
+                <h1 className="recipe-title">{recipe.recipeName}</h1>
 
-                <h3>Ingredients: </h3>
-                <ul>
-                    {recipe.ingredients.map((ingredient, index) => (
-                        <li key={index}>{ingredient}</li>
-                    ))}
-                </ul>
+                <Container>
+                    <Row>
+                        <Col>
+                            <img className="food-image" src={`/${recipe.image}`} alt={recipe.recipeName} />
+                        </Col>
 
-                <h3>Instructions: </h3>
-                <ol>
-                    {toArray(recipe.instructions).map((instruction, index) => (
-                        <li key={index}>{instruction}</li>
-                    ))}
-                </ol>
+                        <Col>
+                            <h4>Calories: {recipe.calories}</h4>
+                            <h3>Ingredients: </h3>
+                            <ul>
+                                {recipe.ingredients.map((ingredient, index) => (
+                                    <li key={index}>{ingredient}</li>
+                                ))}
+                            </ul>
+
+                            <h3>Instructions: </h3>
+                            <ol>
+                                {toArray(recipe.instructions).map((instruction, index) => (
+                                    <li key={index}>{instruction}</li>
+                                ))}
+                            </ol>
+                        </Col>
+                    </Row>
+                </Container> 
             </div>
         </>
     );

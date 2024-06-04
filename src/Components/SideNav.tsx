@@ -1,35 +1,38 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useEffect } from "react";
 import "./SideNav.css";
 
-interface Category {
-  heading: string;
-  items: string[];
-}
+function SideNav() {
+  const location = useLocation();
 
-interface SideNavProps {
-  data: Category[];
-}
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const scrollTo = params.get("scrollTo");
+    if (scrollTo) {
+      const targetElement = document.getElementById(scrollTo);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 48,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location.search]);
 
-function SideNav({ data }: SideNavProps) {
-  /*
   return (
     <div className="sidenav">
-      {data.map((category, index) => (
-        <ListGroup key={index} items={category.items} heading={category.heading} />
-      ))}
+      <a href="/" className="brand">Cuisine Compass</a>
+      <a href="/" className="side-menu">Home</a>
+      <Link to="/?scrollTo=heading" className="side-menu">Recipes</Link>
+      <Link to="/filter" className="side-menu">Filter</Link>
+      <Link to="/submission" className="side-menu">Recipe Submission</Link>
+
+      <Link to="/feedback" className="feedback-button">
+        <Button>Feedback</Button>
+      </Link>
     </div>
   );
-  */
-
-  return (
-    <div className="sidenav">
-      <a className="brand" href="\">Cuisine Compass</a>
-      <a className="side-menu" href="\">Home</a>
-      <a className="side-menu" href="#heading">Recipes</a>
-      <a className="side-menu">Filter</a>
-      <Link to={`/submission`} className="side-menu">Recipe Submission</Link>
-    </div>
-  )
 }
 
 export default SideNav;

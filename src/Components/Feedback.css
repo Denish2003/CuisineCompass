@@ -1,0 +1,13 @@
+.feedback{
+    margin-left: 25%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.heading-feedback {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #26a838;
+}

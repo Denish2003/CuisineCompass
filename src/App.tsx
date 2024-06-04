@@ -5,6 +5,7 @@ import RecipeDetails from "./Components/RecipeDetails";
 import { useState, useEffect } from 'react';
 import { SearchProvider } from './Components/SearchContext';
 import Submission from './Components/Submission';
+import Feedback from './Components/Feedback';
 
 const landingPage = [
   { heading: "Cuisines", items: ["Italian", "Mexican", "Chinese", "Korean", "Japanese", "Mediterranean", "Indian", "American", "French", "Thai", "Greek", "Middle Eastern"] },
@@ -32,11 +33,12 @@ function App() {
   return (
       <>
         <SearchProvider>
-          <SideNav data={sideNavData} />
+          <SideNav />
             <Routes>
               <Route path="/" element={<MainContent />} />
               <Route path="/recipes/:recipeName" element={<RecipeDetails />} />
               <Route path="/submission" element={<Submission />} />
+              <Route path="/feedback" element={<Feedback />}/>
             </Routes>
         </SearchProvider>
       </>
