@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import './NavigationSearch.css';
 import { useSearch } from './SearchContext';
+import './NavigationSearch.css';
 import "./MainContent.css";
 
 interface Recipe {

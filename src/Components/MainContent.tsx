@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useSearch } from './SearchContext';
-import "./MainContent.css";
 import testData from './TestDataset.json';
 import MenuItem from "./MenuItem";
+import "./MainContent.css";
 
 interface Recipe {
     recipeName: string;
