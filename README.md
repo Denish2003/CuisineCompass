@@ -103,7 +103,17 @@ Once you have installed the dependencies, you can run the application locally by
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-<img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/Demo1.png">
+<table style="border: none;">
+  <tr>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/HomePage.png" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/RecipeSection.png" width="500"></td>
+  </tr>
+  <tr>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/RecipeDetailspng.png" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/SubmissionForm.png" width="500"></td>
+  </tr>
+</table>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,12 +121,13 @@ Once you have installed the dependencies, you can run the application locally by
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Top Navigation Bar
-- [X] Side Navigation Bar / Filter System
+- [x] Search Bar
+- [x] Side Navigation Bar
 - [x] Recipe Page for each recipe
-- [ ] Search
-- [ ] Switch from test dataset to actual API
-
+- [x] Switch from test dataset to actual API
+- [x] Submission Form
+- [ ] Feedback Form
+- [ ] Filter
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
