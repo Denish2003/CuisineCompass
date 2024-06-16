@@ -121,13 +121,21 @@ Once you have installed the dependencies, you can run the application locally by
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Search Bar
-- [x] Side Navigation Bar
-- [x] Recipe Page for each recipe
+- [x] Search Functionality
+- [x] Recipe Submission Form
+- [x] Feedback Form
 - [x] Switch from test dataset to actual API
-- [x] Submission Form
-- [ ] Feedback Form
-- [ ] Filter
+- [x] Recipe Filtering
+- [x] Individual Recipe Pages
+- [x] User Login and Registration
+- [ ] Liking and Favoriting Recipes
+- [ ] Commenting on Recipes
+- [ ] User Profile Pages
+- [ ] Responsive Design
+- [ ] Social Sharing
+- [ ] Voice Search
+- [ ] Recipe Print Option
+- [ ] Dataset Creation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
