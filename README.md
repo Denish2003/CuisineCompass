@@ -105,12 +105,12 @@ Once you have installed the dependencies, you can run the application locally by
 
 <table style="border: none;">
   <tr>
-    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/HomePage.png" width="500"></td>
-    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/RecipeSection.png" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/HomePage.png" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/RecipeSection.png" width="500"></td>
   </tr>
   <tr>
-    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/RecipeDetailspng.png" width="500"></td>
-    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/src/Images/SubmissionForm.png" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/RecipeDetailspng.png" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/SubmissionForm.png" width="500"></td>
   </tr>
 </table>
 
