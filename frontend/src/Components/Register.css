@@ -1,0 +1,13 @@
+.image {
+    background-image: url(".//src//Images//Register.jpg");
+}
+
+.register-heading {
+    text-align: center;
+    font-weight: bold !important;
+    color: #26a838;
+}
+
+.mb-4 {
+    color: white !important;
+}
