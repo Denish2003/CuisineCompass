@@ -1,8 +1,9 @@
-import User from '../models/user'
-import { IUser } from '../models/user'
+import User from '../models/User'
+import { IUser } from '../models/User'
 
 export const registerUser = async (user: Partial<IUser>) => {
   const { first_name, last_name, username, email, password } = user;
+
   if (!first_name || !last_name || !username || !email || !password) {
     return {
       error: 'Please provide all the required fields',

@@ -25,9 +25,7 @@ function Submission() {
             </Form.Group>
 
             <div className="d-flex justify-content-center">
-                <Button className="form-button" variant="primary" type="submit">
-                    Submit
-                </Button>
+                <Button className="form-button" variant="primary" type="submit">Submit</Button>
             </div>
             
         </Form>

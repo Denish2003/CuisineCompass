@@ -22,9 +22,9 @@ function SideNav() {
 
   return (
     <div className="sidenav">
-      <a href="/" className="brand">Cuisine Compass</a>
-      <a href="/" className="side-menu">Home</a>
-      <Link to="/?scrollTo=heading" className="side-menu">Recipes</Link>
+      <a href="/home" className="brand">Cuisine Compass</a>
+      <a href="/home" className="side-menu">Home</a>
+      <Link to="/home/?scrollTo=heading" className="side-menu">Recipes</Link>
       <Link to="/filter" className="side-menu">Filter</Link>
       <Link to="/submission" className="side-menu">Recipe Submission</Link>
 

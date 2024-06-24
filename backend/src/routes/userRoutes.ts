@@ -1,11 +1,11 @@
 import express from 'express'
-import { IUser } from '../models/user'
+import { IUser } from '../models/User'
 import { loginUser, registerUser } from '../controllers/authController'
 import auth, { CustomRequest } from '../middleware/authMiddleware'
 
 const router = express.Router()
 
-router.post('/register', async (req, res) => {
+router.post("/register", async (req, res) => {
   const userData: Partial<IUser> = {
     first_name: req.body.first_name,
     last_name: req.body.last_name,
@@ -13,27 +13,34 @@ router.post('/register', async (req, res) => {
     email: req.body.email,
     password: req.body.password,
   }
-  const registeredUser = await registerUser(userData)
-  if (registeredUser.error) {
-    return res.status(400).json({
-      error: registeredUser.error,
-    })
+  try {
+    const registeredUser = await registerUser(req.body);
+    if (registeredUser.error) {
+        return res.status(400).json({ error: registeredUser.error });
+    }
+    return res.status(201).json(registeredUser);
+  } catch (error) {
+      console.error('Error in register endpoint:', error);
+      return res.status(500).json({ error: 'Internal Server Error' });
   }
-  return res.status(201).json(registeredUser)
 })
 
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
   const userData: Partial<IUser> = {
     username: req.body.username,
     password: req.body.password,
   }
-  const loggedInUser = await loginUser(userData)
-  if (loggedInUser?.error) {
-    return res.status(400).json({
-      error: loggedInUser.error,
-    })
+
+  try {
+    const loggedInUser = await loginUser(userData);
+    if (loggedInUser?.error) {
+      return res.status(400).json({ error: loggedInUser.error });
+    }
+    return res.status(200).json(loggedInUser);
+  } catch (error) {
+      console.error('Error in login endpoint:', error);
+      return res.status(500).json({ error: 'Internal Server Error' });
   }
-  return res.status(200).json(loggedInUser)
 })
 
 // Fetch logged in user

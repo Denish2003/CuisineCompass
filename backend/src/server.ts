@@ -1,14 +1,17 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import userRoutes from './routes/userRoutes';
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
+app.use(cors());
+
 app.use("/api/users", userRoutes);
 
 if (!process.env.MONGO_URI) {
@@ -24,3 +27,4 @@ mongoose.connect(process.env.MONGO_URI)
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
 });
+

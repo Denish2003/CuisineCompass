@@ -9,6 +9,7 @@ import RecipeDetails from "./Components/RecipeDetails";
 import Submission from './Components/Submission';
 import Feedback from './Components/Feedback';
 import Register from './Components/Register';
+import Login from './Components/Login';
 
 function App() {
   const APP_ID = "d00499e6";
@@ -40,12 +41,13 @@ function App() {
       <SearchProvider>
         <Routes>
           <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Login />} />
         </Routes>
         
-        {location.pathname !== '/register' && <SideNav />}
+        {location.pathname !== '/register' && location.pathname !== '/' && <SideNav />}
 
         <Routes>
-          <Route path="/" element={<MainContent recipes={recipes} />} />
+          <Route path="/home" element={<MainContent recipes={recipes} />} />
           <Route path="/recipes/:recipeName" element={<RecipeDetails recipes={recipes} />} />
           <Route path="/submission" element={<Submission />} />
           <Route path="/feedback" element={<Feedback />} />
