@@ -5,7 +5,7 @@ import './Login.css';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const history = useNavigate();

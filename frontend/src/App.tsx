@@ -10,6 +10,7 @@ import Submission from './Components/Submission';
 import Feedback from './Components/Feedback';
 import Register from './Components/Register';
 import Login from './Components/Login';
+import Welcome from './Components/Welcome';
 
 function App() {
   const APP_ID = "d00499e6";
@@ -40,11 +41,12 @@ function App() {
     <>
       <SearchProvider>
         <Routes>
+        <Route path="/" element={<Welcome />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         
-        {location.pathname !== '/register' && location.pathname !== '/' && <SideNav />}
+        {location.pathname !== '/' && location.pathname !== '/register' && location.pathname !== '/login' && <SideNav />}
 
         <Routes>
           <Route path="/home" element={<MainContent recipes={recipes} />} />
