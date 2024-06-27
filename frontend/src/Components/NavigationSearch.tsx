@@ -3,12 +3,6 @@ import { useSearch } from './SearchContext';
 import './NavigationSearch.css';
 import "./MainContent.css";
 
-interface Recipe {
-    recipeName: string;
-    image: string;
-    calories: number;
-}
-
 function NavigationSearch() {
     const { setSearchTerm } = useSearch();
     const [search, setSearch] = useState<string>('');

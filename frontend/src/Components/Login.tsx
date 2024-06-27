@@ -8,20 +8,30 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     const history = useNavigate();
 
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:8000/api/users/login", {
+            const response = await axios.post("http://localhost:8000/api/users/login", {
                 username,
                 password
             });
-            
-            history("/home", {state:{id:username}});
 
-        } catch (error) {
-            console.error('Error loging in the user:', error);
+            console.log('Response data:', response.data); // Log the response data
+
+            if (response.data && response.data.error) {
+                setError(response.data.error);
+            } else if (response.data && response.data.token) {
+                history("/home", { state: { id: username } });
+            } else {
+                setError('An unexpected error occurred.');
+            }
+
+        } catch (error: any) {
+            console.error('Error logging in the user:', error);
+            setError(error.response?.data?.error || 'An error occurred during login.');
         }
     };
 
@@ -31,6 +41,8 @@ function Login() {
                 <MDBCol md='6' className="p-4 m-0 d-flex align-items-center justify-content-center">
                     <MDBCardBody className='text-black'>
                         <h2 className="mb-5 text-uppercase fw-bold register-heading">Login</h2>
+
+                        {error && <div className="error">{error}</div>}
 
                         <form onSubmit={handleRegister}>
                             <MDBInput

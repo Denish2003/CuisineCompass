@@ -53,3 +53,9 @@ input.custom-search {
     padding-top: 2%;
     font-weight: bold;
 }
+
+@media (max-width: 1000px) {
+    .main-content {
+        margin-left: 13%;
+    }
+}

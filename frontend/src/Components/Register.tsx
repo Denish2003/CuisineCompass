@@ -11,7 +11,7 @@ function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
     const history = useNavigate();
 
     const handleRegister = async (e: React.FormEvent) => {
@@ -28,13 +28,13 @@ function Register() {
         try {
             const response = await axios.post("http://localhost:8000/api/users/register", payload);
             console.log('Response from backend:', response.data);
-            setMessage('User registered successfully');
+            setError('User registered successfully');
 
             history("/home", {state:{id:username}});
 
         } catch (error: any) {
             console.error('Error registering user:', error.response ? error.response.data : error.message);
-            setMessage(error.response ? error.response.data.error : 'Error registering user');
+            setError(error.response ? error.response.data.error : 'Error registering user');
         }
     };
 
@@ -45,6 +45,8 @@ function Register() {
                     <MDBCardBody className='text-black'>
                         <h2 className="mb-5 text-uppercase fw-bold register-heading">Register</h2>
 
+                        {error && <p className="error">{error}</p>}
+                        
                         <form onSubmit={handleRegister}>
                             <MDBRow>
                                 <MDBCol md='6'>
@@ -104,8 +106,6 @@ function Register() {
                                 <Button className="register-button" variant="primary" type="submit">Register</Button>
                             </div>
                         </form>
-
-                        {message && <p className="error">{message}</p>}
                     </MDBCardBody>
                 </MDBCol>
 

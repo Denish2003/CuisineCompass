@@ -25,19 +25,40 @@ export const registerUser = async (user: Partial<IUser>) => {
 }
 
 export const loginUser = async (user: Partial<IUser>) => {
-    const { username, password } = user;
-    if (!username || !password) {
-      return {
-        error: 'Please provide all the required fields',
-      }
-    }
+  const { username, password } = user;
+  if (!username || !password) {
+    return {
+      error: 'Please provide all the required fields',
+    };
+  }
+
+  try {
     const existingUser = await User.findByCredentials(username, password);
-    if (!existingUser) {
-      return null
-    }
     const token = await existingUser.generateAuthToken();
+    
     return {
       user: existingUser,
       token,
+    };
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      if (error.name === 'UserNotFound') {
+        return {
+          error: 'User not found',
+        };
+      } else if (error.name === 'IncorrectPassword') {
+        return {
+          error: 'Incorrect password',
+        };
+      } else {
+        return {
+          error: 'Login failed! Check authentication credentials',
+        };
+      }
+    } else {
+      return {
+        error: 'An unexpected error occurred',
+      };
     }
   }
+};

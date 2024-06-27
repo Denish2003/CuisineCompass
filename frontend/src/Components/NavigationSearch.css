@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     font-size: 18px;
-    z-index: 1;
+    z-index: 1001;
     background-color: #5A5A5A !important;
 }
 
@@ -31,3 +31,4 @@ input.custom-search {
     border-radius: 50px;
     border: None;
 }
+
