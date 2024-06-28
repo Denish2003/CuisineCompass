@@ -46,6 +46,11 @@ function MainContent({ recipes }: RecipeProps) {
                             label={recipe.label} 
                             image={recipe.image} 
                             calories={recipe.calories}
+                            dietLabels={recipe.dietLabels}
+                            healthLabels={recipe.healthLabels}
+                            mealType={recipe.mealType}
+                            dishType={recipe.dishType}
+                            cuisineType={recipe.cuisineType}
                             ingredients={recipe.ingredients}
                             instructions={recipe.instructions} />
                 ))}

@@ -26,3 +26,15 @@
     font-size: 20px !important;
     width: 50%;
 }
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.diet-label, .health-label {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+}
+  

@@ -1,9 +1,9 @@
 .page {
-    padding: 20px; /* Add padding to the RecipeDetail */
-    top: 60px; /* Position the sidebar 60px from the top of the viewport */
-    bottom: 0px; /* Extend to the bottom of the viewport */
-    overflow-y: auto; /* Allow sidebar to scroll vertically */
-    margin-left: 21%; /* Position the sidebar 25% from the left of the viewport */
+    padding: 20px;
+    top: 60px;
+    bottom: 0px; 
+    overflow-y: auto; 
+    margin-left: 21%; 
     margin-top: 0.5%;
 }  
 
@@ -19,3 +19,14 @@
     width: 100%;
     border-radius: 20px;
 }
+
+.health-labels {
+    columns: 3; 
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
+  
+.health-label {
+    break-inside: avoid; 
+}
+  

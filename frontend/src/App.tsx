@@ -30,8 +30,13 @@ function App() {
       label: hit.recipe.label,
       image: hit.recipe.image,
       calories: Math.round(hit.recipe.calories),
-      ingredients: hit.recipe.ingredients,
-      instructions: hit.recipe.instructions
+      dietLabels: hit.recipe.dietLabels,
+      healthLabels: hit.recipe.healthLabels,
+      mealType: hit.recipe.mealType,
+      dishType: hit.recipe.dishType,
+      cuisineType: hit.recipe.cuisineType,
+      ingredients: hit.recipe.ingredientLines,
+      instructions: hit.recipe.ingredientLines
     }));
     
     setRecipes(allRecipes);
