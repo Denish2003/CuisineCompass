@@ -92,11 +92,25 @@ _Below is an example of how you can instruct your audience on installing and set
 ### Running the Application
 Once you have installed the dependencies, you can run the application locally by following these steps:
 
-1. Start the development server:
+1. Update the `APP_ID` and `APP_KEY` in `frontend\src\App.tsx`
+2. Create .env file `backend\.env` with `PORT`, `MONGO_URI`, and `JWT_SECRET`
+  a. Here is an example template
+  ```sh
+  PORT=8000
+  MONGO_URI=mongodb+srv://<USERNAME>:<PASSWORD>@<PROJECTNAME>.fshvras.mongodb.net/<DATABASE_NAME>
+  JWT_SECRET= <CAN BE ANY RANDOM STRING>
+  ```
+3. Start the server:
    ```sh
+   cd backend
+   ```
+   ```sh
+   npx ts-node src/server.ts
+   ```
+4. Start the development server
+    ```sh
    npm run dev
    ```
-   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -105,12 +119,16 @@ Once you have installed the dependencies, you can run the application locally by
 
 <table style="border: none;">
   <tr>
-    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/HomePage.png" width="500"></td>
-    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/RecipeSection.png" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/Demo/Demo1.PNG" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/Demo/Demo2.PNG" width="500"></td>
   </tr>
   <tr>
-    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/RecipeDetailspng.png" width="500"></td>
-    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/SubmissionForm.png" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/Demo/Demo3.PNG" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/Demo/Demo4.PNG" width="500"></td>
+  </tr>
+  <tr>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/Demo/Demo5.PNG" width="500"></td>
+    <td style="border: none;"><img src="https://github.com/Denish2003/CuisineCompass/blob/main/frontend/src/Images/Demo/Demo6.PNG" width="500"></td>
   </tr>
 </table>
 
